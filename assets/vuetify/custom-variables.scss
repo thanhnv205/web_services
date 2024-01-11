@@ -1,0 +1,12 @@
+:root {
+  --bg-primary-color: #000;
+  --bg-secondary-color: #f2f2f2;
+  --width-line-title: 100px;
+}
+
+.bg-primary {
+  background-color: var(--bg-primary-color) !important;
+}
+.v-btn__content {
+  font-weight: 500;
+}

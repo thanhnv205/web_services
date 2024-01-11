@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.v-btn.btn,
+.btn {
+  min-height: 44px;
+  border-radius: 5px;
+  font-weight: 400;
+  background: transparent;
+  letter-spacing: 0.3px;
+}
+.btn-transparent {
+  .v-btn__overlay {
+    background-color: transparent;
+  }
+}
+img {
+  max-width: 100%;
+}
+@media (min-width: 1280px) {
+  body .v-container {
+    max-width: 1440px;
+  }
+}
+.container {
+  width: calc(100% - 120px);
+  margin: 0 auto;
+}
+section.section {
+  margin-top: 90px;
+}
