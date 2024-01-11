@@ -2,4 +2,8 @@
   <HeroSection />
   <PartnerSection />
   <IntroSection />
+  <ServiceSection />
+  <OurProjectSection />
+  <TestimonialSection />
+  <ContactSection />
 </template>

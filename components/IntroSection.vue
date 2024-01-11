@@ -1,21 +1,17 @@
 <template>
-  <!-- <section class="section">
-    <TitleSection
-      title="Our Project"
-      description="Our latest projects"
-      line="right"
-    />
-  </section> -->
-
   <section class="section">
     <v-row no-gutters>
-      <v-col cols="6">
-        <v-row no-gutters>
+      <v-col cols="6" class="clear-space">
+        <v-row no-gutters class="font-0 custom-row">
           <v-col cols="6">
-            <img src="~/assets/images/partner-2.png" alt="" />
+            <div class="spacing-x">
+              <img src="~/assets/images/partner-2.png" alt="" />
+            </div>
           </v-col>
           <v-col cols="6">
-            <img src="~/assets/images/partner-1.png" alt="" />
+            <div class="spacing-x">
+              <img src="~/assets/images/partner-1.png" alt="" />
+            </div>
           </v-col>
         </v-row>
 
@@ -70,14 +66,17 @@
 }
 
 .into-achieve {
-  width: 65%;
+  position: relative;
+  margin-top: -12%;
+  right: -20px;
+  width: 68%;
   margin-left: auto;
   background: var(--bg-secondary-color);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05);
 }
 .item-achieve {
   position: relative;
-  padding: 30px 40px;
+  padding: 25px 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -97,5 +96,11 @@
   left: 0;
   height: 60px;
   background-color: #3d3d3d;
+}
+.custom-row {
+  margin: 0 -35px;
+}
+.spacing-x {
+  padding: 0 calc(35px / 2);
 }
 </style>
