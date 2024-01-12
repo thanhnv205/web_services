@@ -3,7 +3,7 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
-  css: ["~/assets/css/global.scss", "~/assets/vuetify/custom-variables.scss"],
+  css: ["~/assets/vuetify/custom-variables.scss", "~/assets/css/global.scss"],
 
   components: {
     global: true,

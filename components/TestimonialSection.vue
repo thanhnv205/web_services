@@ -82,24 +82,30 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .custom-row {
   margin: 0 -25px;
 }
 .spacing-x {
   padding: 0 25px;
 }
-.testimonial-item {
-  padding: 40px;
-  background-color: var(--bg-secondary-color);
+.testimonial {
+  &-item {
+    padding: 40px;
+    background-color: var(--bg-secondary-color);
+  }
+  &-user {
+    margin-bottom: 40px;
+  }
+  &-info {
+    margin-left: 15px;
+    text-transform: capitalize;
+  }
+  &-more {
+    font-family: var(--font-secondary);
+  }
 }
-.testimonial-user {
-  margin-bottom: 40px;
-}
-.testimonial-info {
-  margin-left: 15px;
-  text-transform: capitalize;
-}
+
 .client-name {
   font-size: 18px;
   font-weight: 700;

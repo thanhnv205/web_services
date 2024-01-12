@@ -14,9 +14,8 @@
           <v-btn
             to="/"
             variant="outlined"
-            color="#000"
             size="x-large"
-            class="btn-transparent btn text-none"
+            class="btn-transparent btn text-none bg-black"
           >
             View more
             <template v-slot:append>
@@ -53,21 +52,24 @@
   </section>
 </template>
 
-<style type="scss" scoped>
-.hero-content {
-  padding: 60px 60px 30px 100px;
-}
-.hero-title {
-  font-size: 52px;
-  letter-spacing: 1.04px;
-  line-height: 1.2;
-  margin-bottom: 35px;
-}
-.hero-desc {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  margin-bottom: 50px;
+<style lang="scss" scoped>
+.hero {
+  &-content {
+    padding: 60px 60px 30px 100px;
+  }
+  &-title {
+    font-size: 52px;
+    letter-spacing: 1.04px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+  }
+  &-desc {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
 }
 img {
   object-fit: cover;

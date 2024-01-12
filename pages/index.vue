@@ -6,4 +6,5 @@
   <OurProjectSection />
   <TestimonialSection />
   <ContactSection />
+  <OurBlogSection />
 </template>

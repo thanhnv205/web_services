@@ -22,7 +22,7 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .our-project {
   position: relative;
 }
@@ -32,17 +32,18 @@
   bottom: 0;
   padding: 50px;
   color: var(--color-white);
-}
-.project-content-title {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.48px;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  line-height: 1;
-}
-.project-content-desc {
-  font-size: 16px;
-  font-weight: 300;
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    line-height: 1;
+  }
+  &-desc {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 300;
+  }
 }
 </style>

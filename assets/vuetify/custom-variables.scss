@@ -1,13 +1,17 @@
-:root {
-  --bg-primary-color: #000;
-  --bg-secondary-color: #f2f2f2;
-  --width-line-title: 100px;
-  --color-white: #fff;
-  --color-black: #000;
+$v-btn-height-large: 46px;
+$v-btn-height-small: 32px;
+
+.v-btn {
+  &.v-btn--size-x-large {
+    --v-btn-height: #{$v-btn-height-large};
+  }
+  &.v-btn--size-x-small {
+    --v-btn-height: #{$v-btn-height-small};
+  }
 }
 
 .bg-primary {
-  background-color: var(--bg-primary-color) !important;
+  background-color: var(--bg-primary-color);
 }
 .v-btn__content {
   font-weight: 500;

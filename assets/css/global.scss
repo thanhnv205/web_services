@@ -1,15 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Inconsolata", monospace;
+  --bg-primary-color: #000;
+  --bg-secondary-color: #f2f2f2;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-secondary: #3d3d3d;
+  --width-line-title: 100px;
+  --width-contaier-lg: 1440px;
+  --height-header: 100px;
+  --color-line-primary: #0000001f;
+}
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
+}
+header.toolbar--fixed {
+  position: fixed;
+  max-width: var(--width-contaier-lg);
+  background-color: #ccc;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-line-primary);
+}
+
+main.v-main {
+  padding-top: var(--height-header);
 }
 .v-btn.btn,
 .btn {
-  min-height: 44px;
+  min-height: 46px;
   border-radius: 5px;
   font-weight: 400;
   background: transparent;
   letter-spacing: 0.3px;
+  font-family: var(--font-secondary);
 }
 .btn-transparent {
   .v-btn__overlay {
@@ -21,16 +48,27 @@ img {
 }
 @media (min-width: 1280px) {
   body .v-container {
-    max-width: 1440px;
+    max-width: var(--width-contaier-lg);
   }
 }
 .container {
   width: calc(100% - 120px);
   margin: 0 auto;
 }
+.input-line {
+  border-bottom: 1px solid var(--bg-primary-color);
+  outline: 0;
+}
 section.section {
   margin-top: 90px;
 }
 .clear-space {
   font-size: 0;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+ul {
+  list-style: none;
 }

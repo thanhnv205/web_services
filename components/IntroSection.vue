@@ -45,7 +45,7 @@
             line="left"
             description="We work professionally and wholeheartedly"
           />
-          <p>
+          <p class="intro-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing
             dui tellus commodo convallis. Auctor eget orci pharetra non. Integer
             lorem in scelerisque tortor dui tempor, volutpat viverra faucibus.
@@ -98,9 +98,12 @@
   background-color: #3d3d3d;
 }
 .custom-row {
-  margin: 0 -35px;
+  margin: 0 calc(-35px / 2);
 }
 .spacing-x {
   padding: 0 calc(35px / 2);
+}
+.intro-text {
+  font-family: var(--font-secondary);
 }
 </style>

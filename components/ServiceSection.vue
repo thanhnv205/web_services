@@ -39,7 +39,7 @@
 
 <style scoped>
 .custom-row {
-  margin: 0 -5px;
+  margin: 0 calc(-5px / 2);
 }
 .spacing-x {
   position: relative;
