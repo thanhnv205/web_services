@@ -18,6 +18,7 @@
 body {
   font-family: var(--font-primary);
 }
+
 header.toolbar--fixed {
   position: fixed;
   max-width: var(--width-contaier-lg);
@@ -26,9 +27,10 @@ header.toolbar--fixed {
   border-bottom: 1px solid var(--color-line-primary);
 }
 
-main.v-main {
+main.v-main:not(.custom-main) {
   padding-top: var(--height-header);
 }
+
 .v-btn.btn,
 .btn {
   min-height: 46px;
@@ -38,37 +40,46 @@ main.v-main {
   letter-spacing: 0.3px;
   font-family: var(--font-secondary);
 }
+
 .btn-transparent {
   .v-btn__overlay {
     background-color: transparent;
   }
 }
+
 img {
   max-width: 100%;
 }
+
 @media (min-width: 1280px) {
   body .v-container {
     max-width: var(--width-contaier-lg);
   }
 }
+
 .container {
   width: calc(100% - 120px);
   margin: 0 auto;
 }
+
 .input-line {
   border-bottom: 1px solid var(--bg-primary-color);
   outline: 0;
 }
+
 section.section {
   margin-top: 90px;
 }
+
 .clear-space {
   font-size: 0;
 }
+
 a {
   text-decoration: none;
   color: initial;
 }
+
 ul {
   list-style: none;
 }

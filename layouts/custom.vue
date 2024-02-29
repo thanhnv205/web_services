@@ -1,17 +1,15 @@
 <template>
-  <v-container class="container">
-    <v-app>
-      <v-main>
-        <slot />
-      </v-main>
-    </v-app>
-  </v-container>
+  <v-app>
+    <v-main class="custom-main">
+      <slot />
+    </v-main>
+  </v-app>
 </template>
 
 <style scoped>
-.container {
-  margin: 0px auto;
-  padding: 0px;
-  width: 1440px;
+.custom-main {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
 }
 </style>

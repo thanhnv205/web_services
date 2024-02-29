@@ -2,22 +2,14 @@
   <section class="wrapper">
     <div class="roration">
       <div class="roration-circle wheel">
-        <div
-          class="roration-luck"
-          :style="{ transform: `rotate(${rotation}deg)` }"
-          ref="rotationLuck"
-        >
-          <div
-            class="luck-item"
-            v-for="(section, index) in sections"
-            :key="index"
-            :class="{ winner: index + 1 === winningPosition }"
-            :style="{
+        <div class="roration-luck"
+          :style="{ transform: `rotate(${rotation}deg)` }" ref="rotationLuck">
+          <div class="luck-item" v-for="(section, index) in sections" :key="index"
+            :class="{ winner: index + 1 === winningPosition }" :style="{
               color: '#fff',
               backgroundColor: section.color,
               transform: `rotate(${index * (360 / sections.length)}deg)`,
-            }"
-          >
+            }">
             {{ section.value }}
           </div>
         </div>
@@ -107,20 +99,31 @@ const determineWinningPosition = () => {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
+  height: 100%;
+  padding-top: 10%;
+  background-image: url('../assets/images/lucky-wrapper.jpg');
+  background-size: cover;
 }
+
 .roration {
   position: relative;
+  width: 550px;
+  height: 550px;
   display: flex;
   justify-content: center;
+  background-image: url('~/assets/images/border-wheel.png');
+  background-size: 100%;
+  align-items: center;
+
   &-circle {
     position: relative;
-    border: 15px solid #610000;
+    border: 2px solid #fff;
     border-radius: 50%;
     box-sizing: border-box;
+
     .roration-luck {
-      width: 400px;
-      height: 400px;
+      width: 470px;
+      height: 470px;
       display: flex;
       align-items: baseline;
       justify-content: center;
@@ -129,8 +132,8 @@ const determineWinningPosition = () => {
 
       .luck-item {
         position: absolute;
-        width: 160px;
-        height: 200px;
+        width: 190px;
+        height: 235px;
         font-size: 50px;
         text-align: center;
         clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -138,40 +141,33 @@ const determineWinningPosition = () => {
       }
     }
   }
+
   &-arrow {
     position: absolute;
-    top: -20px;
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 80px solid #ea4b4c;
-    border-radius: 50px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -95px;
-      left: -48px;
-      width: 80px;
-      height: 20px;
-      background-color: #fff;
-    }
+    top: 5px;
+    width: 80px;
+    height: 90px;
+    clip-path: polygon(50% 100%, 100% 18%, 75% 0, 25% 0, 0 18%);
+    background-color: #610000;
   }
 
   &-footer {
     margin-top: 50px;
   }
 }
+
 .btn-game {
   font-size: 20px;
   padding: 10px 50px;
   border-radius: 15px;
-  background-image: linear-gradient(0deg, #ea4b4c, #f39696 0%, #ea4b4c);
+  background-image: linear-gradient(0deg, #610000, #f39696 0%, #610000);
   border: 2px solid #f39696;
   transition: all 0.5s;
+
   &:not(:hover) {
-    box-shadow: 0 10px 10px -7px red;
+    box-shadow: 0 10px 10px -7px #610000;
   }
+
   &:hover {
     transform: translateY(5px);
   }
