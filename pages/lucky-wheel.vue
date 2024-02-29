@@ -37,6 +37,10 @@
 <script setup>
 import { ref, onUnmounted } from "vue";
 
+definePageMeta({
+  layout: "custom",
+});
+
 const sections = [
   { value: 1, color: "red" },
   { value: 2, color: "green" },
@@ -67,7 +71,7 @@ const startSpinning = () => {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
   };
-  const generatedPosition = getRandomInt(1, 360);
+  const generatedPosition = getRandomInt(1, totalTime);
   // const updateRotation = () => {
   //   currentRotation += randomPieMovement;
   //   rotation.value = currentRotation;
@@ -83,7 +87,7 @@ const startSpinning = () => {
   //     currentSpeed = startRun + (endRun - startRun) * progress;
   //   }
   // };
-  console.log("generatedPosition", generatedPosition);
+  console.log("updateRotation", updateRotation);
   // intervalId = setInterval(updateRotation, 10);
   onUnmounted(() => clearInterval(intervalId));
 };
@@ -100,8 +104,6 @@ const determineWinningPosition = () => {
 </script>
 <style scoped lang="scss">
 .wrapper {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-flow: column;
   align-items: center;
